@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VietAnhActivity">
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="  Tra từ Việt - Anh"
+                android:padding="8dp"
+                android:layout_margin="16dp"
+                android:cursorVisible="false"
+                android:drawableLeft="@drawable/ic_search"
+                android:id="@+id/search_view_vietanh"
+                android:background="@android:color/white"/>
+            <include layout="@layout/layout_title"
+                android:id="@+id/layouttitle"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/edtKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative"
+        android:text="Kết quả tra "
+        />
+</RelativeLayout>

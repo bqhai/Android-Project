@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout_main"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+<!--            <androidx.appcompat.widget.AppCompatImageButton-->
+<!--                android:id="@+id/btnShowNavigation"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+            <com.arlib.floatingsearchview.FloatingSearchView
+                android:id="@+id/searchMain"
+                android:layout_width="match_parent"
+                app:floatingSearch_menu="@menu/menu_searchview"
+                android:layout_height="60dp"
+                app:floatingSearch_dismissOnOutsideTouch="true"
+                app:floatingSearch_leftActionMode="showHamburger"
+                app:floatingSearch_searchHint="Search..."
+                app:floatingSearch_showSearchKey="true"
+                app:floatingSearch_suggestionsListAnimDuration="250"
+                app:floatingSearch_dimBackground="false"
+                app:floatingSearch_close_search_on_keyboard_dismiss="false"/>
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="  Tra từ Anh - Việt"-->
+<!--                android:padding="8dp"-->
+<!--                android:layout_margin="16dp"-->
+<!--                android:cursorVisible="false"-->
+<!--                android:drawableLeft="@drawable/ic_search"-->
+<!--                android:id="@+id/search_view_anhviet"-->
+<!--                android:background="@android:color/white"/>-->
+            <include layout="@layout/layout_title"
+                android:id="@+id/layouttitle"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/relative">
+
+    <Button
+        android:id="@+id/btnDichVanBan"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTuDienVietAnh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:padding="18dp"
+        android:text="   Dịch văn bản"
+        android:textAlignment="textStart"
+        android:textColor="#f5f7fa"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_vanban"/>
+    <Button
+        android:id="@+id/btnTuCuaBan"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDichVanBan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:padding="18dp"
+        android:text="   Từ của bạn"
+        android:textAlignment="textStart"
+        android:textColor="#f5f7fa"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_star"/>
+    <Button
+        android:id="@+id/btnTuDaTra"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTuCuaBan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:padding="18dp"
+        android:text="   Từ đã tra"
+        android:textAlignment="textStart"
+        android:textColor="#f5f7fa"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_info"/>
+    <Button
+        android:id="@+id/btnDongTuBQT"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTuDaTra"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:padding="18dp"
+        android:text="   Động từ bất quy tắc"
+        android:textAlignment="textStart"
+        android:textColor="#f5f7fa"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_book"/>
+    <Button
+        android:id="@+id/btnKhoaHoc"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDongTuBQT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:padding="18dp"
+        android:text="   VIDEO HỌC TIẾNG ANH  "
+        android:textAlignment="textStart"
+        android:textColor="#f5f7fa"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_book"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_main"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/menu_app"
+        android:fitsSystemWindows="true"/>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_home"
+            android:checked="false"
+            android:icon="@drawable/ic_book"
+            android:title="Trang Chủ"/>
+
+        <item
+            android:id="@+id/item_search"
+            android:checked="false"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search"/>
+
+        <item
+            android:id="@+id/item_yourwords"
+            android:checked="false"
+            android:icon="@drawable/ic_star"
+            android:title="Từ của bạn "/>
+        <item
+            android:id="@+id/item_history"
+            android:checked="false"
+            android:icon="@drawable/ic_info"
+            android:title="Search History"/>
+        <item
+            android:id="@+id/item_para"
+            android:checked="false"
+            android:icon="@drawable/ic_vanban"
+            android:title="Dịch văn bản"/>
+        <item
+            android:id="@+id/item_course"
+            android:checked="false"
+            android:icon="@drawable/ic_book"
+            android:title="Courses"/>
+
+        <item
+            android:id="@+id/item_exit"
+            android:checked="false"
+            android:icon="@drawable/ic_arrow_back_black_24dp"
+            android:title="Thoát"/>
+    </group>
+</menu>
